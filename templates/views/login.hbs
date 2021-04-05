@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>Header}}
+    <title>login form</title>
+
+    <style>
+        .formsection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .formdiv{
+            border: 2px solid #222;
+            box-shadow: 4px 0 4px 0 #777;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        .formdiv h1{
+            text-align: center;
+            text-transform: uppercase;
+            padding: 1rem 0;
+        }
+        .formdiv .inp{
+            width: 20rem;
+            height: 3rem;
+            margin: 0.4rem;
+            border-radius: 0.3rem none;
+            outline: none;
+        }
+        .formdiv .inp:focus{
+            outline: 1px solid #222;
+        }
+        .formdiv .inp:placeholder-shown{
+            margin: 0.3rem;
+        }
+
+        .formdiv .btnlogin{
+            height: 2rem;
+            margin: 1rem 0;
+            background-color: #222;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+        
+
+    
+
+    </style>
+
+</head>
+<body>
+
+        {{>Navbar}}
+    <section class="formsection">
+        <form action="/login" method="POST" class="formdiv">
+            <h1>Login</h1>
+            <input class="inp" type="email" name="email" placeholder="Enter Email">
+            <input  class="inp" type="password" name="password" placeholder="Enter Password">
+            <input class="btnlogin" type="submit" value="Login">
+        </form>
+    </section>
+</body>
+</html>

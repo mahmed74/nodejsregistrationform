@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>Header}}
+    <title>Signup form</title>
+
+    <style>
+        .formsection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        
+        .formsection form div{
+            margin: 1rem;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .formsection form div input{
+            width: 20rem;
+            height: 3rem;
+        }
+
+        .genderDiv{
+            display: block;
+            text-align: center;
+        }
+
+
+    
+
+            .signupbtn{
+               margin:auto;
+            }
+
+    </style>
+
+</head>
+<body>
+
+        {{>Navbar}}
+    <section class="formsection">
+        <form action="/signup" method="POST">
+         <div>
+           FirstName
+            <input type="text" name="fname" placeholder="Enter your First Name">
+       
+        </div>
+         <div>
+           LastName
+            <input type="text" name="lname" placeholder="Enter your Last Name">
+       
+        </div>
+        <div>
+           Email
+            <input type="email" name="email" placeholder="Enter your email Address">
+       
+        </div>
+        <div>
+            Password
+            <input type="password" name="password" placeholder="Enter your Password">
+       
+        </div>
+       <div>
+           Confirm Password
+            <input type="password" name="confirmpassword" placeholder="Re-Enter your Password">
+  
+       </div>
+       <span class="genderDiv">
+           gender:
+            <span>Male:<input type="radio" name="gender" value="male"> Female:<input type="radio" name="gender" value="female"></span>
+  
+       </span>
+
+<div>
+    <input class="signupbtn" type="submit" value="Signup">
+</div>
+    </form>
+    </section>
+</body>
+</html>
